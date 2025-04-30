@@ -22,4 +22,8 @@ const middleNode = function(head) {
     return slowPointer;
 };
 
+//Constraints:
+// The number of nodes in the list is in the range [1, 100].
+// 1 <= Node.val <= 100
+
 //https://leetcode.com/problems/middle-of-the-linked-list/description/?envType=problem-list-v2&envId=linked-list
