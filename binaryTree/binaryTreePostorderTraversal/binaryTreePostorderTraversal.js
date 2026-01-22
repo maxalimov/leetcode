@@ -11,24 +11,24 @@
  * @return {number[]}
  */
 //TODO: add iterative solution
-const preorderTraversal = function(root) {
+const postorderTraversal = function(root) {
     const result = [];
 
-    const DFSPreorder = (node) => {
-        if (node === null) {
+    const DFSPostOrder = (node) => {
+        if (!node) {
             return;
         }
 
+        DFSPostOrder(node.left);
+        DFSPostOrder(node.right);
         result.push(node.val);
-        DFSPreorder(node.left);
-        DFSPreorder(node.right);
     }
 
-    DFSPreorder(root);
+    DFSPostOrder(root);
 
     return result;
 };
 
 //Constraints:
-// The number of nodes in the tree is in the range [0, 100].
+// The number of the nodes in the tree is in the range [0, 100].
 // -100 <= Node.val <= 100
